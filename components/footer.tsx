@@ -12,39 +12,39 @@ export default function Footer() {
             <span className="ml-3 text-xl font-bold">30-Days-Of-Projects</span>
           </a>
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-            Developed By <span className="font-bold">Muhammad Talha</span>
+            Developed By <span className="font-bold">Saim Amjad</span>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
             <a
-              href="https://www.facebook.com/talha.gp.3?mibextid=ZbWKwL"
+              href="https://www.facebook.com/saim.amjad.14"
               className="text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
               target="_blank"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://github.com/Muhammad-Talha103"
+              href="https://github.com/saim00191"
               className="ml-4 text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
               target="_blank"
             >
               <FaGithub />
             </a>
             <a
-              href="https://www.instagram.com/talhagp88/"
+              href="https://www.instagram.com/amjad_saim_9/"
               className="ml-4 text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
               target="_blank"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://www.linkedin.com/in/muhammad-talha-aa1429240/"
+              href="https://www.linkedin.com/in/saim-raza-b7a7172b6/"
               className="ml-4 text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
               target="_blank"
             >
               <FaLinkedinIn />
             </a>
             <a
-              href="mailto:talhagp908@gmail.com"
+              href="mailto:saimamjad198@gmail.com"
               className="ml-4 text-gray-500 text-2xl cursor-pointer hover:text-gray-900"
             >
               <FaEnvelope />
