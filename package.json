@@ -11,6 +11,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "axios": "^1.7.7",
+    "fireworks-js": "^2.10.8",
     "next": "14.2.11",
     "openai": "^4.61.0",
     "react": "^18",
