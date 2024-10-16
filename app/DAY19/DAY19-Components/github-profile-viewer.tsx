@@ -1,23 +1,28 @@
-'use client'
-import { useState } from 'react';
-import Link from 'next/link';
-import {GitHubUser } from './types';
+"use client";
+import { useState } from "react";
+import Link from "next/link";
+import { GitHubUser } from "./types";
+import Image from "next/image";
 
 export default function Home() {
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
   const [user, setUser] = useState<GitHubUser | null>(null);
-  const [error, setError] = useState <string>('');
+  const [error, setError] = useState<string>("");
 
-  const fetchProfile = async (e:React.FormEvent<HTMLFormElement>) => {
+  const fetchProfile = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError('');
+    setError("");
     try {
       const res = await fetch(`https://api.github.com/users/${username}`);
-      if (!res.ok) throw new Error('User not found');
+      if (!res.ok) throw new Error("User not found");
       const data = await res.json();
       setUser(data);
     } catch (err) {
-      setError(err.message);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unexpected error occurred");
+      }
       setUser(null);
     }
   };
@@ -47,10 +52,12 @@ export default function Home() {
         )}
         {user && (
           <div className="p-4 flex-col justify-center items-center">
-            <img
+            <Image
               src={user.avatar_url}
               alt={user.login}
-              className="rounded-full h-40 w-40 md:h-64 md:w-64 mx-auto"
+              className="rounded-full mx-auto"
+              width={250}
+              height={250}
             />
             <h2 className="font-semibold text-center text-2xl md:text-4xl my-4">
               {user.name || user.login}

@@ -1,22 +1,8 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { Archivo_Black, Protest_Guerrilla } from "next/font/google";
 import { Fireworks } from "fireworks-js"; // Import the Fireworks class from the library
-import BgImage from './BgImage/bgImage.png'
-
-// Define the font loader at the module scope
-const archivo = Archivo_Black({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
-
-const mate = Protest_Guerrilla({
-  subsets: ["latin"],
-  weight: "400",
-  display: "swap",
-});
+import BgImage from "./BgImage/bgImage.png";
 
 export default function BirthdayWishApp() {
   // State variables for name, birthday, message, and fireworks visibility
@@ -58,7 +44,7 @@ export default function BirthdayWishApp() {
   };
 
   // Function to handle the form submission and determine the birthday message
-  const handleSubmit = (e:React.MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault(); // Prevent default form submission behavior
 
     // Get today's date and format it to MM-DD
@@ -78,7 +64,8 @@ export default function BirthdayWishApp() {
     }
 
     // Calculate the number of days until the next birthday
-    const daysUntilBirthday = Math.ceil( //Math.ceil is a JavaScript function that rounds a number up to the nearest integer, regardless of the decimal value.
+    const daysUntilBirthday = Math.ceil(
+      //Math.ceil is a JavaScript function that rounds a number up to the nearest integer, regardless of the decimal value.
       (nextBirthday.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
     );
 
@@ -145,11 +132,8 @@ export default function BirthdayWishApp() {
 
       <div className="bg-white border-[7px] rounded-lg shadow-lg p-8 w-full max-w-md mx-4 sm:mx-6 md:mx-8 lg:mx-12 z-10">
         <h1 className="text-3xl font-bold mb-6 text-center">
-          🎂{" "}
-          <span className={`${mate.className} text-4xl text-yellow-700`}>
-            BIRTHDAY
-          </span>
-          <span className={`${archivo.className} text-slate-800`}> WISH</span>🎉
+          🎂 <span className={`text-4xl text-yellow-700`}>BIRTHDAY</span>
+          <span className={`text-slate-800`}> WISH</span>🎉
           <span className="font-mono"> APP</span>🎉
         </h1>
         {/* Form to collect user's name and birthday */}
