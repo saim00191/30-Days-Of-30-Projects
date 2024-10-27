@@ -1,15 +1,15 @@
 "use client";
-import "aos/dist/aos.css"; // Import AOS styles
-import AOS from "aos"; // Import AOS for initialization
-import { useEffect } from "react"; // Import useEffect hook for initialization
+import "aos/dist/aos.css"; 
+import AOS from "aos"; 
+import { useEffect } from "react"; 
 import Link from "next/link";
 
 export default function MainPage() {
-  // Initialize AOS on component mount
+
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 1000, 
+      once: true,
     });
   }, []);
 
@@ -18,7 +18,7 @@ export default function MainPage() {
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Array.from({ length: 30 }).map((_, index) => {
           const dayNumber = index + 1;
-          const isComingSoon = dayNumber > 22;
+          const isComingSoon = dayNumber > 23;
 
           return (
             <Link
