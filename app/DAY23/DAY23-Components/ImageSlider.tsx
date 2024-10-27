@@ -26,6 +26,7 @@ export default function ImageSlider() {
 
   return (
     <div className="max-w-2xl mx-auto my-8">
+      <h1 className="text-center py-6 text-4xl font-bold underline">Image Slider</h1>
       <div className="relative h-[500px] w-full">
         <Image
           src={images[currentIndex]}
