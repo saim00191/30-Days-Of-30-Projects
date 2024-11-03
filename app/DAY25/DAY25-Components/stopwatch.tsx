@@ -66,24 +66,24 @@ export default function Stopwatch() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-black">
-      <div className="p-24 bg-gray-800 rounded-lg shadow-md">
-        <h1 className="text-4xl font-bold mb-8 text-center text-white">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black p-4">
+      <div className="max-w-md w-full p-8 bg-gray-800 rounded-lg shadow-md">
+        <h1 className="text-3xl sm:text-4xl font-bold mb-6 text-center text-white">
           Stopwatch
         </h1>
-        <div className="text-6xl font-bold font-mono mb-8 text-center text-white">
+        <div className="text-5xl sm:text-6xl font-bold font-mono mb-6 text-center text-white">
           {formatTime(elapsedTime)}
         </div>
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-col sm:flex-row justify-center space-x-0 sm:space-x-4">
           <button
             onClick={handleStartPauseResume}
-            className={`px-6 py-2 rounded-md font-semibold ${getButtonColor()} transition-colors duration-200`}
+            className={`w-full sm:w-auto px-6 py-2 rounded-md font-semibold ${getButtonColor()} transition-colors duration-200 mb-2 sm:mb-0`}
           >
             {getButtonText()}
           </button>
           <button
             onClick={handleReset}
-            className="px-6 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-500 transition-colors duration-200"
+            className="w-full sm:w-auto px-6 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-500 transition-colors duration-200"
           >
             Reset
           </button>
