@@ -18,7 +18,7 @@ export default function MainPage() {
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {Array.from({ length: 30 }).map((_, index) => {
           const dayNumber = index + 1;
-          const isComingSoon = dayNumber > 29;
+          const isComingSoon = dayNumber > 30;
 
           return (
             <Link
@@ -33,7 +33,7 @@ export default function MainPage() {
               className="transform transition-transform hover:scale-105"
             >
               <div
-                data-aos="fade-up" // Add the AOS animation effect
+                data-aos="fade-up" 
                 className={`flex flex-col items-center justify-center h-32 rounded-lg shadow-lg p-6 border transition-all duration-300 ${
                   isComingSoon
                     ? "bg-gray-200 border-gray-400 cursor-not-allowed text-gray-600"
